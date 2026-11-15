@@ -1,4 +1,4 @@
-<a href="https://portfolio.vercel.app">
+<a href="https://murali1801.vercel.app">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/masthead-dark.svg">
     <img src="assets/masthead-light.svg" width="100%" alt="Muralidhar Acharya, web and app developer in India">
@@ -18,7 +18,7 @@ Right now I'm making small open-source tools for colour, UI and READMEs. Everyth
           <img src="assets/card-tonal-light.svg" width="100%" alt="Tonal: OKLCH colour scales with APCA contrast and Tailwind v4 export">
         </picture>
       </a>
-      <sub><a href="https://tonal.vercel.app">Live</a> · <a href="https://github.com/Murali1801/tonal">Source</a> · TypeScript, OKLCH, APCA</sub>
+      <sub><a href="https://tonal-murali.vercel.app">Live</a> · <a href="https://github.com/Murali1801/tonal">Source</a> · TypeScript, OKLCH, APCA</sub>
     </td>
     <td width="50%" valign="top">
       <a href="https://github.com/Murali1801/sheet">
@@ -27,7 +27,7 @@ Right now I'm making small open-source tools for colour, UI and READMEs. Everyth
           <img src="assets/card-sheet-light.svg" width="100%" alt="Sheet: a native-feel bottom sheet Web Component with zero dependencies">
         </picture>
       </a>
-      <sub><a href="https://sheet.vercel.app">Live</a> · <a href="https://github.com/Murali1801/sheet">Source</a> · Web Components, spring physics</sub>
+      <sub><a href="https://sheet-murali.vercel.app">Live</a> · <a href="https://github.com/Murali1801/sheet">Source</a> · Web Components, spring physics</sub>
     </td>
   </tr>
   <tr>
@@ -38,7 +38,7 @@ Right now I'm making small open-source tools for colour, UI and READMEs. Everyth
           <img src="assets/card-tab-light.svg" width="100%" alt="Tab: split bills offline, no account and no server">
         </picture>
       </a>
-      <sub><a href="https://tab.vercel.app">Live</a> · <a href="https://github.com/Murali1801/tab">Source</a> · PWA, IndexedDB, UPI</sub>
+      <sub><a href="https://tab-murali.vercel.app">Live</a> · <a href="https://github.com/Murali1801/tab">Source</a> · PWA, IndexedDB, UPI</sub>
     </td>
     <td width="50%" valign="top">
       <a href="https://github.com/Murali1801/masthead">
@@ -47,7 +47,7 @@ Right now I'm making small open-source tools for colour, UI and READMEs. Everyth
           <img src="assets/card-masthead-light.svg" width="100%" alt="Masthead: animated SVG banners for your README, no server">
         </picture>
       </a>
-      <sub><a href="https://masthead.vercel.app">Live</a> · <a href="https://github.com/Murali1801/masthead">Source</a> · SVG, opentype.js, CLI</sub>
+      <sub><a href="https://masthead-murali.vercel.app">Live</a> · <a href="https://github.com/Murali1801/masthead">Source</a> · SVG, opentype.js, CLI</sub>
     </td>
   </tr>
 </table>
@@ -60,4 +60,4 @@ The banner and cards on this page were made with Masthead.
 
 **Open to** &nbsp;freelance web and app builds, and design engineering roles.
 
-<sub>■ <a href="https://portfolio.vercel.app">portfolio</a> · <a href="https://github.com/Murali1801?tab=repositories">all repositories</a></sub>
+<sub>■ <a href="https://murali1801.vercel.app">portfolio</a> · <a href="https://github.com/Murali1801?tab=repositories">all repositories</a></sub>
