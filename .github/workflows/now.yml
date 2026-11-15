@@ -1,0 +1,54 @@
+name: Update "Now" line
+
+on:
+  schedule:
+    - cron: "30 3 * * *" # daily, 09:00 IST
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  now:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Read latest public push
+        id: latest
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          event=$(gh api "users/${{ github.repository_owner }}/events/public?per_page=50" \
+            --jq '[.[] | select(.type=="PushEvent" and .repo.name != "${{ github.repository }}")][0]')
+          if [ -z "$event" ] || [ "$event" = "null" ]; then
+            echo "line=" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          repo=$(echo "$event" | jq -r '.repo.name')
+          msg=$(echo "$event" | jq -r '.payload.commits[-1].message // ""' | head -n1 | cut -c1-80 | sed 's/[<>|]//g')
+          day=$(echo "$event" | jq -r '.created_at[:10]')
+          short=${repo#*/}
+          echo "line=Last commit on [${short}](https://github.com/${repo}) (${day}): ${msg}" >> "$GITHUB_OUTPUT"
+
+      - name: Write it into README
+        if: steps.latest.outputs.line != ''
+        env:
+          LINE: ${{ steps.latest.outputs.line }}
+        run: |
+          python3 - <<'PY'
+          import os, re
+          p = "README.md"
+          s = open(p, encoding="utf-8").read()
+          s2 = re.sub(r"<!--now:start-->.*?<!--now:end-->",
+                      "<!--now:start-->" + os.environ["LINE"] + "<!--now:end-->", s, flags=re.S)
+          if s2 != s:
+              open(p, "w", encoding="utf-8").write(s2)
+          PY
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -am "Update now line"
+          git push
