@@ -56,7 +56,7 @@ The banner and cards on this page were made with Masthead.
 
 **Stack** &nbsp;`TypeScript` `React` `Next.js` `Astro` `React Native / Expo` `Tailwind` `Firebase` `Supabase` `Python` `Shopify Liquid`
 
-**Now** &nbsp;<!--now:start-->Shipping Tonal, Sheet, Tab and Masthead.<!--now:end-->
+**Now** &nbsp;<!--now:start-->Last commit on [masthead](https://github.com/Murali1801/masthead) (2026-11-16): <!--now:end-->
 
 **Open to** &nbsp;freelance web and app builds, and design engineering roles.
 
